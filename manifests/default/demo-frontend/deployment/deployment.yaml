@@ -1,0 +1,219 @@
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+    kubectl.kubernetes.io/last-applied-configuration: '{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"demo-frontend","namespace":"default"},"spec":{"replicas":2,"selector":{"matchLabels":{"app":"demo-frontend"}},"template":{"metadata":{"labels":{"app":"demo-frontend"}},"spec":{"containers":[{"image":"nginx:alpine","name":"nginx","resources":{"limits":{"cpu":"50m","memory":"32Mi"},"requests":{"cpu":"10m","memory":"16Mi"}}}]}}}}
+
+      '
+  creation_timestamp: 2025-11-05 20:33:58+00:00
+  deletion_grace_period_seconds: null
+  deletion_timestamp: null
+  finalizers: null
+  generate_name: null
+  labels: null
+  managed_fields:
+  - apiVersion: apps/v1
+    fields_type: FieldsV1
+    fields_v1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app: {}
+          f:spec:
+            f:containers:
+              k:{"name":"nginx"}:
+                .: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:terminationGracePeriodSeconds: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    subresource: null
+    time: 2025-11-05 20:33:58+00:00
+  - apiVersion: apps/v1
+    fields_type: FieldsV1
+    fields_v1:
+      f:metadata:
+        f:annotations:
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: k3s
+    operation: Update
+    subresource: status
+    time: 2025-11-10 17:30:38+00:00
+  name: demo-frontend
+  namespace: default
+  owner_references: null
+  resource_version: '40089'
+  self_link: null
+spec:
+  min_ready_seconds: null
+  paused: null
+  progress_deadline_seconds: 600
+  replicas: 2
+  revision_history_limit: 10
+  selector:
+    match_expressions: null
+    match_labels:
+      app: demo-frontend
+  strategy:
+    rolling_update:
+      max_surge: 25%
+      max_unavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations: null
+      creation_timestamp: null
+      deletion_grace_period_seconds: null
+      deletion_timestamp: null
+      finalizers: null
+      generate_name: null
+      generation: null
+      labels:
+        app: demo-frontend
+      managed_fields: null
+      name: null
+      namespace: null
+      owner_references: null
+      resource_version: null
+      self_link: null
+      uid: null
+    spec:
+      active_deadline_seconds: null
+      affinity: null
+      automount_service_account_token: null
+      containers:
+      - args: null
+        command: null
+        env: null
+        env_from: null
+        image: nginx:alpine
+        image_pull_policy: IfNotPresent
+        lifecycle: null
+        liveness_probe: null
+        name: nginx
+        ports: null
+        readiness_probe: null
+        resize_policy: null
+        resources:
+          claims: null
+          limits:
+            cpu: 50m
+            memory: 32Mi
+          requests:
+            cpu: 10m
+            memory: 16Mi
+        restart_policy: null
+        security_context: null
+        startup_probe: null
+        stdin: null
+        stdin_once: null
+        termination_message_path: /dev/termination-log
+        termination_message_policy: File
+        tty: null
+        volume_devices: null
+        volume_mounts: null
+        working_dir: null
+      dns_config: null
+      dns_policy: ClusterFirst
+      enable_service_links: null
+      ephemeral_containers: null
+      host_aliases: null
+      host_ipc: null
+      host_network: null
+      host_pid: null
+      host_users: null
+      hostname: null
+      image_pull_secrets: null
+      init_containers: null
+      node_name: null
+      node_selector: null
+      os: null
+      overhead: null
+      preemption_policy: null
+      priority: null
+      priority_class_name: null
+      readiness_gates: null
+      resource_claims: null
+      restart_policy: Always
+      runtime_class_name: null
+      scheduler_name: default-scheduler
+      scheduling_gates: null
+      security_context:
+        fs_group: null
+        fs_group_change_policy: null
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+        seccomp_profile: null
+        supplemental_groups: null
+        sysctls: null
+        windows_options: null
+      service_account: null
+      service_account_name: null
+      set_hostname_as_fqdn: null
+      share_process_namespace: null
+      subdomain: null
+      termination_grace_period_seconds: 30
+      tolerations: null
+      topology_spread_constraints: null
+      volumes: null
+apiVersion: apps/v1
