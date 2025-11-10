@@ -1,0 +1,230 @@
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+  creation_timestamp: 2025-11-07 19:12:51+00:00
+  deletion_grace_period_seconds: null
+  deletion_timestamp: null
+  finalizers: null
+  generate_name: null
+  labels:
+    app: busybox-test
+  managed_fields:
+  - apiVersion: apps/v1
+    fields_type: FieldsV1
+    fields_v1:
+      f:spec:
+        f:replicas: {}
+    manager: OpenAPI-Generator
+    operation: Update
+    subresource: scale
+    time: null
+  - apiVersion: apps/v1
+    fields_type: FieldsV1
+    fields_v1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app: {}
+          f:spec:
+            f:containers:
+              k:{"name":"busybox-test"}:
+                .: {}
+                f:command: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:terminationGracePeriodSeconds: {}
+    manager: OpenAPI-Generator
+    operation: Update
+    subresource: null
+    time: 2025-11-07 19:12:51+00:00
+  - apiVersion: apps/v1
+    fields_type: FieldsV1
+    fields_v1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: k3s
+    operation: Update
+    subresource: status
+    time: 2025-11-10 17:31:09+00:00
+  name: busybox-test
+  namespace: default
+  owner_references: null
+  resource_version: '40335'
+  self_link: null
+spec:
+  min_ready_seconds: null
+  paused: null
+  progress_deadline_seconds: 600
+  replicas: 1
+  revision_history_limit: 10
+  selector:
+    match_expressions: null
+    match_labels:
+      app: busybox-test
+  strategy:
+    rolling_update:
+      max_surge: 25%
+      max_unavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations: null
+      creation_timestamp: null
+      deletion_grace_period_seconds: null
+      deletion_timestamp: null
+      finalizers: null
+      generate_name: null
+      generation: null
+      labels:
+        app: busybox-test
+      managed_fields: null
+      name: null
+      namespace: null
+      owner_references: null
+      resource_version: null
+      self_link: null
+      uid: null
+    spec:
+      active_deadline_seconds: null
+      affinity: null
+      automount_service_account_token: null
+      containers:
+      - args: null
+        command:
+        - sh
+        - -c
+        - while true; do echo Hello from busybox; sleep 30; done
+        env: null
+        env_from: null
+        image: busybox
+        image_pull_policy: Always
+        lifecycle: null
+        liveness_probe: null
+        name: busybox-test
+        ports: null
+        readiness_probe: null
+        resize_policy: null
+        resources:
+          claims: null
+          limits:
+            cpu: 100m
+            memory: 128Mi
+          requests:
+            cpu: 50m
+            memory: 64Mi
+        restart_policy: null
+        security_context: null
+        startup_probe: null
+        stdin: null
+        stdin_once: null
+        termination_message_path: /dev/termination-log
+        termination_message_policy: File
+        tty: null
+        volume_devices: null
+        volume_mounts: null
+        working_dir: null
+      dns_config: null
+      dns_policy: ClusterFirst
+      enable_service_links: null
+      ephemeral_containers: null
+      host_aliases: null
+      host_ipc: null
+      host_network: null
+      host_pid: null
+      host_users: null
+      hostname: null
+      image_pull_secrets: null
+      init_containers: null
+      node_name: null
+      node_selector: null
+      os: null
+      overhead: null
+      preemption_policy: null
+      priority: null
+      priority_class_name: null
+      readiness_gates: null
+      resource_claims: null
+      restart_policy: Always
+      runtime_class_name: null
+      scheduler_name: default-scheduler
+      scheduling_gates: null
+      security_context:
+        fs_group: null
+        fs_group_change_policy: null
+        run_as_group: null
+        run_as_non_root: null
+        run_as_user: null
+        se_linux_options: null
+        seccomp_profile: null
+        supplemental_groups: null
+        sysctls: null
+        windows_options: null
+      service_account: null
+      service_account_name: null
+      set_hostname_as_fqdn: null
+      share_process_namespace: null
+      subdomain: null
+      termination_grace_period_seconds: 30
+      tolerations: null
+      topology_spread_constraints: null
+      volumes: null
+apiVersion: apps/v1
